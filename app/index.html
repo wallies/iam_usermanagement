@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>OpenAM (Login)</title>
+	<meta name="viewport" content="width=device-width" />
+	<link href="/oneid/css/new_style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="webicons-master/fc-webicons.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/2.0/stylesheets/general_foundicons.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<!--[if IE 9]> <link href="/oneid/css/ie9.css" rel="stylesheet" type="text/css"> <![endif]-->
+	<!--[if lte IE 7]> <link href="/oneid/css/ie7.css" rel="stylesheet" type="text/css"> <![endif]-->
+	<script language="JavaScript" src="/oneid/js/auth.js" type="text/javascript"></script>
+	<script src="scripts/vendor/custom.modernizr.js"></script>
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	var defaultBtn = 'Submit';
+	var elmCount = 0;
+/**
+* submit form with given button value
+*
+* @param value of button
+*/
+function LoginSubmit(value) {
+	aggSubmit();
+	var hiddenFrm = document.forms['Login'];
+
+	if (hiddenFrm != null) {
+		hiddenFrm.elements['IDButton'].value = value;
+		if (this.submitted) {
+			alert("The request is currently being processed");
+		}
+		else {
+			this.submitted = true;
+			hiddenFrm.submit();
+		}
+	}
+}
+-->
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var defaultBtn = 'Submit';
+var elmCount = 0;
+
+function defaultSubmit() {
+	LoginSubmit(defaultBtn);
+}
+
+function resetForms() {
+	var frms = document.forms;
+	for (var i = 0; i < elmCount; i++) {
+		var frm = frms['frm' + i];
+
+		if (frm != null) {
+			clearFormElms(frm);
+		}
+	}
+	placeCursorOnFirstElm();
+}
+-->
+</script>
+</head>
+
+<body onload="placeCursorOnFirstElm();">
+
+
+	<div class="row">
+		<div class="large-12 small-12 large-centered columns">
+			<div class="small-8 large-3 small-centered columns">
+				<img src="http://www.uk.capgemini.com/sites/all/themes/capgemini/logo.png" alt="" class="cap-logo"/>
+			</div>
+
+			<div class="section-container tabs" data-section="tabs">
+				<section>
+					<p class="title" data-section-title><a href="#">Login</a></p>
+					<div class="content" data-section-content>
+						<div class="row">
+							<div class="large-8 columns">
+								<div class="row">
+								</div>
+								<h1 class="subheader">Sign in</h1>
+								<form   name="Login"  action="/oneid/UI/Login"  method="post">
+									<script language="javascript" type="text/javascript">
+									<!--
+									elmCount++;
+									-->
+									</script>
+									<script language="javascript" type="text/javascript">
+									<!--
+									elmCount++;
+									-->
+									</script>
+									<div class="row">
+										<div class="large-9 columns">
+											<input class="textbox" placeholder="User Name"type="text" name="IDToken1" id="IDToken1" value="" />
+										</div>
+										<script language="javascript" type="text/javascript">
+										<!--
+										elmCount++;
+										-->
+										</script>
+										<div class="large-9 columns">
+											<input class="textbox" type="password" name="IDToken2" id="IDToken2" value="" placeholder="Password"/>
+											<div class="hide-for-small">
+												<h6 class="subheader"><a href="">Forgot password</a></h6>
+												<label for="checkbox1"><input type="checkbox" id="checkbox1"><span class="custom checkbox"></span>  Remember Account</label>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="small-12 large-2 right pull-3 columns">
+											<input name="Login.Submit" type="submit" onclick="LoginSubmit('Log In'); return false;" class="button expand medium radius" value="Log In" />		
+										</div>
+									</div>
+									<script language="javascript" type="text/javascript">
+									<!--
+									if (elmCount != null) {
+										document.write("<input name=\"IDButton"  + "\" type=\"hidden\">");
+									}
+									-->
+									</script>
+									<div class="hide-for-large show-for-small">
+										<p class="subheader"><a href="">Forgot password</a></p><br>
+										<label for="checkbox1"><input type="checkbox" id="checkbox1"><span class="custom checkbox"></span>  Remember Account</label>
+									</div>
+									<input type="hidden" name="goto" value="" />
+									<input type="hidden" name="gotoOnFail" value=""/>
+									<input type="hidden" name="SunQueryParamsString" value="Z3hfY2hhcnNldD1VVEYtOA==" />
+									<input type="hidden" name="encoded" value="false" />
+									<input type="hidden" name="gx_charset" value="UTF-8"/>
+								</form>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Other ways to log in:</h4>
+								<div class="row">
+									<div class="large-6 small-12 columns">
+										<button class="small expand radius secondary"><a class="fc-webicon facebook social-size large " href="#">Facebook</a></button>
+									</div>
+									<div class="large-6 small-12 columns">
+										<button class="small expand radius secondary"><a class="fc-webicon twitter social-size large " href="#">Twitter</a></button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="large-6 small-12 columns">
+										<button class="small expand radius secondary"><a class="fc-webicon youtube social-size large " href="#">Youtube</a></button>
+									</div>
+									<div class="large-6 small-12 columns">
+										<button class="small expand radius secondary"><a class="fc-webicon googleplus social-size large " href="#">Googleplus</a></button>
+									</div>
+								</div>
+								<div class="row" style="margin-top:130px;">
+									<div class="large-12 columns">
+										<h6 class="subheader">Terms of Use &amp; Privacy Policy</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<p class="title" data-section-title><a href="#">Register</a></p>
+					<div class="content" data-section-content>
+					<h1 class="subheader">Self Registration</h1>
+					<div class="row">
+						<div class="large-6 large-centered columns">
+							<div data-alert="" class="alert-box radius">
+								<i class="general foundicon-idea">: <span class="red-star">*</span> Indicates required field</i>
+								<a href="" class="close">×</a>
+							</div>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm4" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="First Name *" type="text" name="IDToken4" id="IDToken4" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm5" action="blank"onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="Last Name *" type="text" name="IDToken5" id="IDToken5" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm7" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="Email Address" type="text" name="IDToken7" id="IDToken7" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm1" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="User Name * " type="text" name="IDToken1" id="IDToken1" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm2" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="Password *" type="password" name="IDToken2" id="IDToken2" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm3" action="blank"onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="Confirm Password *" type="password" name="IDToken3" id="IDToken3" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<form name="frm6" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+								<input class="textbox" placeholder="Full Name *" type="text" name="IDToken6" id="IDToken6" value="" />
+							</form>
+							<script language="javascript" type="text/javascript">
+							<!--
+							elmCount++;
+							-->
+							</script>
+							<div class="row">
+								<div class="small-12 large-3 columns">
+									<input name="Login.Submit" type="button" onclick="LoginSubmit(' Register '); return false;" class="button radius expand small " value=" Register " />
+								</div>
+								<div class="small-12 large-3 columns">
+									<input name="Login.Submit" type="button" onclick="LoginSubmit(' Cancel '); return false;" class="button radius expand small" value=" Cancel " />
+								</div>
+								<div class="small-12 large-4 left columns">
+									<input name="Login.Submit" type="button" onclick="resetForms(); return false;" class="button radius secondary expand small" value="Reset Form" />
+								</div>
+							</div>
+							<form   name="Login"  action="/oneid/UI/Login"  method="post">
+								<script language="javascript" type="text/javascript">
+								<!--
+								if (elmCount != null) {
+									for (var i = 0; i < elmCount; i++) {
+										document.write(
+											"<input name=\"IDToken" + i + "\" type=\"hidden\">");
+									}
+									document.write("<input name=\"IDButton"  + "\" type=\"hidden\">");
+								}
+								-->
+								</script>
+								<input type="hidden" name="page_state" value="4"/>
+								<input type="hidden" name="gx_charset" value="UTF-8"/></form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	<div class="row">
+		<div class="large-6 columns">
+			<!-- <p>Copyright © 2010-2011 ForgeRock AS, Philip Pedersens vei 1, 1366 Lysaker, Norway. All rights reserved. Licensed for use under the Common Development and Distribution License (CDDL), see http://www.forgerock.com/license/CDDLv1.0.html for details. This software is based on the OpenSSO/OpenAM open source project and the source includes the copyright works of other authors, granted for use under the CDDL. This distribution may include other materials developed by third parties. All Copyrights and Trademarks are property of their owners.</p> -->
+		</div>
+	</div>
+</div>
+</div>
+
+<script>
+document.write('<script src=' +
+	('__proto__' in {} ? 'scripts/vendor/zepto' : 'scripts/vendor/jquery') +
+	'.js><\/script>')
+</script>
+
+<script src="scripts/foundation.min.js"></script>
+
+<script>
+$(document).foundation();
+</script>
+
+</body>
+
+</html>

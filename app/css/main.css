@@ -1,0 +1,19 @@
+/* line 1, ../scss/main.scss */
+.cap-logo {
+  margin: 25px 0;
+}
+
+/* line 5, ../scss/main.scss */
+.red-star {
+  color: maroon;
+  font-size: 20px;
+}
+
+/* line 13, ../scss/main.scss */
+.fc-webicon.facebook.social-size,
+.fc-webicon.twitter.social-size,
+.fc-webicon.youtube.social-size,
+.fc-webicon.googleplus.social-size {
+  height: 35px;
+  width: 35px;
+}
