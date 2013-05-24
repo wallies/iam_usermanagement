@@ -68,10 +68,8 @@ function resetForms() {
 </head>
 
 <body onload="placeCursorOnFirstElm();">
-
-
 	<div class="row">
-		<div class="large-12 small-12 large-centered columns">
+		<div class="small-12 columns">
 			<div class="small-8 large-3 small-centered columns">
 				<img src="http://www.uk.capgemini.com/sites/all/themes/capgemini/logo.png" alt="" class="cap-logo"/>
 			</div>
@@ -82,10 +80,8 @@ function resetForms() {
 					<div class="content" data-section-content>
 						<div class="row">
 							<div class="large-8 columns">
-								<div class="row">
-								</div>
 								<h1 class="subheader">Sign in</h1>
-								<form   name="Login"  action="/oneid/UI/Login"  method="post">
+								<form   name="Login"  action="37.153.96.200:8080/oneid/UI/Login"  method="post" class="custom">
 									<script language="javascript" type="text/javascript">
 									<!--
 									elmCount++;
@@ -108,8 +104,11 @@ function resetForms() {
 										<div class="large-9 columns">
 											<input class="textbox" type="password" name="IDToken2" id="IDToken2" value="" placeholder="Password"/>
 											<div class="hide-for-small">
+												<label for="checkbox1">
+													<input type="checkbox" id="checkbox1" style="display: none;" ng-model="authenticate">
+													<span class="custom checkbox"></span> Remember Me
+												</label><br>
 												<h6 class="subheader"><a href="">Forgot password</a></h6>
-												<label for="checkbox1"><input type="checkbox" id="checkbox1"><span class="custom checkbox"></span>  Remember Account</label>
 											</div>
 										</div>
 									</div>
@@ -126,8 +125,11 @@ function resetForms() {
 									-->
 									</script>
 									<div class="hide-for-large show-for-small">
-										<p class="subheader"><a href="">Forgot password</a></p><br>
-										<label for="checkbox1"><input type="checkbox" id="checkbox1"><span class="custom checkbox"></span>  Remember Account</label>
+										<label for="checkbox1">
+											<input type="checkbox" id="checkbox1" style="display: none;" ng-model="authenticate">
+											<span class="custom checkbox"></span> Remember Me
+										</label><br>
+										<p class="subheader"><a href="">Forgot password</a></p>
 									</div>
 									<input type="hidden" name="goto" value="" />
 									<input type="hidden" name="gotoOnFail" value=""/>
@@ -138,27 +140,49 @@ function resetForms() {
 							</div>
 							<div class="large-4 columns">
 								<h4 class="subheader">Other ways to log in:</h4>
-								<div class="row">
-									<div class="large-6 small-12 columns">
-										<button class="small expand radius secondary"><a class="fc-webicon facebook social-size large " href="#">Facebook</a></button>
-									</div>
-									<div class="large-6 small-12 columns">
-										<button class="small expand radius secondary"><a class="fc-webicon twitter social-size large " href="#">Twitter</a></button>
-									</div>
-								</div>
-								<div class="row">
-									<div class="large-6 small-12 columns">
-										<button class="small expand radius secondary"><a class="fc-webicon youtube social-size large " href="#">Youtube</a></button>
-									</div>
-									<div class="large-6 small-12 columns">
-										<button class="small expand radius secondary"><a class="fc-webicon googleplus social-size large " href="#">Googleplus</a></button>
-									</div>
-								</div>
-								<div class="row" style="margin-top:130px;">
-									<div class="large-12 columns">
-										<h6 class="subheader">Terms of Use &amp; Privacy Policy</h6>
-									</div>
-								</div>
+								<ul class="small-block-grid-1 large-block-grid-2">
+									<li>
+										<button class="button secondary expand radius">
+											<span class="large-4 small-4 social-button columns">
+												<a class="fc-webicon facebook social-size large " href="#">Facebook</a>
+											</span>
+											<span class="large-4 small-4 left social-name columns">
+												Facebook
+											</span>
+										</button>
+									</li>
+									<li>
+										<button class="button secondary expand radius">
+											<span class="large-4 small-4 social-button columns">
+												<a class="fc-webicon twitter social-size large " href="#">Twitter</a>
+											</span>
+											<span class="large-4 small-4 left social-name columns">
+												Twitter
+											</span>
+										</button>
+									</li>
+									<li>
+										<button class="button secondary expand radius">
+											<span class="large-4 small-4 social-button columns">
+												<a class="fc-webicon youtube social-size large " href="#">Youtube</a>
+											</span>
+											<span class="large-4 small-4 left social-name columns">
+												Youtube
+											</span>
+										</button>
+									</li>
+									<li>
+										<button class="button secondary expand radius">
+											<span class="large-4 small-4 social-button columns">
+												<a class="fc-webicon googleplus social-size large " href="#">Googleplus</a>
+											</span>
+											<span class="large-4 small-4 left social-name columns">
+												Google+
+											</span>
+										</button>
+									</li>
+								</ul>
+								<a href="#" data-reveal-id="t-cModal"><h6 class="subheader" style="margin-top:55px;">Terms of Use &amp; Privacy Policy</h6></a>
 							</div>
 						</div>
 					</div>
@@ -167,130 +191,164 @@ function resetForms() {
 				<section>
 					<p class="title" data-section-title><a href="#">Register</a></p>
 					<div class="content" data-section-content>
-					<h1 class="subheader">Self Registration</h1>
-					<div class="row">
-						<div class="large-6 large-centered columns">
-							<div data-alert="" class="alert-box radius">
-								<i class="general foundicon-idea">: <span class="red-star">*</span> Indicates required field</i>
-								<a href="" class="close">×</a>
-							</div>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm4" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="First Name *" type="text" name="IDToken4" id="IDToken4" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm5" action="blank"onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="Last Name *" type="text" name="IDToken5" id="IDToken5" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm7" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="Email Address" type="text" name="IDToken7" id="IDToken7" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm1" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="User Name * " type="text" name="IDToken1" id="IDToken1" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm2" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="Password *" type="password" name="IDToken2" id="IDToken2" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm3" action="blank"onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="Confirm Password *" type="password" name="IDToken3" id="IDToken3" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<form name="frm6" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
-								<input class="textbox" placeholder="Full Name *" type="text" name="IDToken6" id="IDToken6" value="" />
-							</form>
-							<script language="javascript" type="text/javascript">
-							<!--
-							elmCount++;
-							-->
-							</script>
-							<div class="row">
-								<div class="small-12 large-3 columns">
-									<input name="Login.Submit" type="button" onclick="LoginSubmit(' Register '); return false;" class="button radius expand small " value=" Register " />
+						<h1 class="subheader">Self Registration</h1>
+						<div class="row">
+							<div class="large-6 large-centered columns">
+								<div data-alert="" class="alert-box radius">
+									<i class="general foundicon-idea"> - <span class="red-star">*</span> Indicates required field</i>
+									<a href="" class="close">×</a>
 								</div>
-								<div class="small-12 large-3 columns">
-									<input name="Login.Submit" type="button" onclick="LoginSubmit(' Cancel '); return false;" class="button radius expand small" value=" Cancel " />
-								</div>
-								<div class="small-12 large-4 left columns">
-									<input name="Login.Submit" type="button" onclick="resetForms(); return false;" class="button radius secondary expand small" value="Reset Form" />
-								</div>
-							</div>
-							<form   name="Login"  action="/oneid/UI/Login"  method="post">
 								<script language="javascript" type="text/javascript">
 								<!--
-								if (elmCount != null) {
-									for (var i = 0; i < elmCount; i++) {
-										document.write(
-											"<input name=\"IDToken" + i + "\" type=\"hidden\">");
-									}
-									document.write("<input name=\"IDButton"  + "\" type=\"hidden\">");
-								}
+								elmCount++;
 								-->
 								</script>
-								<input type="hidden" name="page_state" value="4"/>
-								<input type="hidden" name="gx_charset" value="UTF-8"/></form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm4" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+									<input class="textbox" placeholder="First Name *" type="text" name="IDToken4" id="IDToken4" value="" />
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm5" action="blank"onsubmit="defaultSubmit(); return false;" method="post">
+									<input class="textbox" placeholder="Last Name *" type="text" name="IDToken5" id="IDToken5" value="" />
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm7" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+									<div class="row collapse">
+										<div class="large-11 small-10 columns">
+											<input class="textbox" placeholder="Email Address" type="text" name="IDToken7" id="IDToken7" value="" />
+										</div>
+										<div class="large-1 small-2 columns">
+											<span data-tooltip class="has-tip" title="eg. john.smith@example.com">
+												<span class="postfix radius">
+													<i class="general foundicon-idea"></i>
+												</span>
+											</span>
+										</div>
+									</div>
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm1" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+									<input class="textbox" placeholder="User Name * " type="text" name="IDToken1" id="IDToken1" value="" />
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm2" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+									<div class="row collapse">
+										<div class="large-11 small-10 columns">
+											<input class="textbox" placeholder="Password *" type="password" name="IDToken2" id="IDToken2" value="" />
+										</div>
+										<div class="large-1 small-2 columns">
+											<span data-tooltip class="has-tip" title="Minimum of 8 characters">
+												<span class="postfix radius">
+													<i class="general foundicon-idea"></i>
+												</span>
+											</span>
+										</div>
+									</div>
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm3" action="blank"onsubmit="defaultSubmit(); return false;" method="post">
+									<div class="row collapse">
+										<div class="large-11 small-10 columns">
+											<input class="textbox" placeholder="Confirm Password *" type="password" name="IDToken3" id="IDToken3" value="" />
+										</div>
+										<div class="large-1 small-2 columns">
+											<span data-tooltip class="has-tip" title="Minimum of 8 characters">
+												<span class="postfix radius">
+													<i class="general foundicon-idea"></i>
+												</span>
+											</span>
+										</div>
+									</div>
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<form name="frm6" action="blank" onsubmit="defaultSubmit(); return false;" method="post">
+									<input class="textbox" placeholder="Full Name *" type="hidden" name="IDToken6" id="IDToken6" value="" />
+								</form>
+								<script language="javascript" type="text/javascript">
+								<!--
+								elmCount++;
+								-->
+								</script>
+								<div class="row">
+									<div class="small-12 large-4 columns">
+										<input name="Login.Submit" type="button" onclick="LoginSubmit(' Register '); return false;" class="button radius expand medium" value=" Register " />
+									</div>
+									<div class="small-12 large-4 columns">
+										<input name="Login.Submit" type="button" onclick="LoginSubmit(' Cancel '); return false;" class="button secondary radius expand medium" value=" Cancel " />
+									</div>
+									<div class="small-12 large-4 left columns">
+										<input name="Login.Submit" type="button" onclick="resetForms(); return false;" class="button radius secondary expand medium" value="Reset Form" />
+									</div>
+								</div>
+								<form   name="Login"  action="/oneid/UI/Login"  method="post">
+									<script language="javascript" type="text/javascript">
+									<!--
+									if (elmCount != null) {
+										for (var i = 0; i < elmCount; i++) {
+											document.write(
+												"<input name=\"IDToken" + i + "\" type=\"hidden\">");
+										}
+										document.write("<input name=\"IDButton"  + "\" type=\"hidden\">");
+									}
+									-->
+									</script>
+									<input type="hidden" name="page_state" value="4"/>
+									<input type="hidden" name="gx_charset" value="UTF-8"/></form>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-		</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<!-- <p>Copyright © 2010-2011 ForgeRock AS, Philip Pedersens vei 1, 1366 Lysaker, Norway. All rights reserved. Licensed for use under the Common Development and Distribution License (CDDL), see http://www.forgerock.com/license/CDDLv1.0.html for details. This software is based on the OpenSSO/OpenAM open source project and the source includes the copyright works of other authors, granted for use under the CDDL. This distribution may include other materials developed by third parties. All Copyrights and Trademarks are property of their owners.</p> -->
+				</section>
+			</div>
 		</div>
 	</div>
+
+<div id="t-cModal" class="reveal-modal">
+	<h2>Terms of Use &amp; Privacy Policy</h2>
+	<p class="lead">Your couch.  It is mine.</p>
+	<p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+	<a class="close-reveal-modal">&#215;</a>
 </div>
-</div>
 
-<script>
-document.write('<script src=' +
-	('__proto__' in {} ? 'scripts/vendor/zepto' : 'scripts/vendor/jquery') +
-	'.js><\/script>')
-</script>
+	<script>
+	document.write('<script src=' +
+		('__proto__' in {} ? 'scripts/vendor/zepto' : 'scripts/vendor/jquery') +
+		'.js><\/script>')
+	</script>
 
-<script src="scripts/foundation.min.js"></script>
+	<script src="scripts/foundation.min.js"></script>
 
-<script>
-$(document).foundation();
-</script>
+	<script>
+	$(document).foundation();
+	</script>
 
 </body>
-
 </html>

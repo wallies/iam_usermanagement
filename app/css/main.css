@@ -17,3 +17,35 @@
   height: 35px;
   width: 35px;
 }
+
+/* line 19, ../scss/main.scss */
+.social-button {
+  padding: 0;
+}
+
+/* line 23, ../scss/main.scss */
+.social-name {
+  margin-top: 10px;
+  margin-left: 0;
+  padding-left: 0;
+  color: #2ba6cb;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 31, ../scss/main.scss */
+  .social-name {
+    font-size: 20px;
+    margin-top: 11px;
+    letter-spacing: 1px;
+    color: #2ba6cb;
+  }
+
+  /* line 40, ../scss/main.scss */
+  .fc-webicon.facebook.social-size,
+  .fc-webicon.twitter.social-size,
+  .fc-webicon.youtube.social-size,
+  .fc-webicon.googleplus.social-size {
+    height: 50px;
+    width: 50px;
+  }
+}
