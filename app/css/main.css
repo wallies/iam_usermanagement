@@ -33,6 +33,11 @@
 
 @media only screen and (max-width: 768px) {
   /* line 31, ../scss/main.scss */
+  .section-container.tabs > section > .title, .section-container.tabs > .section.active > .title {
+    width: 50%;
+  }
+
+  /* line 34, ../scss/main.scss */
   .social-name {
     font-size: 20px;
     margin-top: 11px;
@@ -40,7 +45,7 @@
     color: #2ba6cb;
   }
 
-  /* line 40, ../scss/main.scss */
+  /* line 43, ../scss/main.scss */
   .fc-webicon.facebook.social-size,
   .fc-webicon.twitter.social-size,
   .fc-webicon.youtube.social-size,
@@ -48,4 +53,8 @@
     height: 50px;
     width: 50px;
   }
+}
+/* line 49, ../scss/main.scss */
+.center {
+  text-align: center;
 }

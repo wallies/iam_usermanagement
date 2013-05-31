@@ -4,7 +4,7 @@
 $include-html-top-bar-classes: $include-html-classes !default;
 
 // Background color for the top bar
-$topbar-bg:                            #111 !default;
+$topbar-bg:                            hsla(196, 92%, 42%, 0.75) !default;
 
 // Height and margin
 $topbar-height:                        45px !default;
@@ -18,10 +18,10 @@ $topbar-title-weight:                  bold !default;
 $topbar-title-font-size:               emCalc(17px) !default;
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg:                   #222 !default;
+$topbar-dropdown-bg:                   hsla(196, 92%, 42%, 0.75) !default;
 $topbar-dropdown-link-color:           #fff !default;
-$topbar-dropdown-link-bg:              lighten($topbar-bg, 5%) !default;
-$topbar-dropdown-toggle-size:          5px !default;
+$topbar-dropdown-link-bg:              lighten($topbar-bg, 0%) !default;
+$topbar-dropdown-toggle-size:          0px !default;
 $topbar-dropdown-toggle-color:         #fff !default;
 $topbar-dropdown-toggle-alpha:         0.5 !default;
 
@@ -31,11 +31,11 @@ $topbar-link-color-hover:              #fff !default;
 $topbar-link-color-active:             #fff !default;
 $topbar-link-weight:                   bold !default;
 $topbar-link-font-size:                emCalc(13px) !default;
-$topbar-link-hover-lightness:          -30% !default; // Darken by 30%
-$topbar-link-bg-hover:                 darken($topbar-bg, 3%) !default;
-$topbar-link-bg-active:                darken($topbar-bg, 3%) !default;
+$topbar-link-hover-lightness:          -10% !default; // Darken by 30%
+$topbar-link-bg-hover:                 darken($topbar-bg, 10%) !default;
+$topbar-link-bg-active:                darken($topbar-bg, 10%) !default;
 
-$topbar-dropdown-label-color:          #555 !default;
+$topbar-dropdown-label-color:          hsla(196, 92%, 42%, 0.75) !default;
 $topbar-dropdown-label-text-transform: uppercase !default;
 $topbar-dropdown-label-font-weight:    bold !default;
 $topbar-dropdown-label-font-size:      emCalc(10px) !default;
@@ -51,7 +51,7 @@ $topbar-menu-icon-color-toggled:       #888 !default;
 
 // Transitions and breakpoint styles
 $topbar-transition-speed:              300ms !default;
-$topbar-breakpoint:                    emCalc(940px) !default; // Change to 9999px for always mobile layout
+$topbar-breakpoint:                    emCalc(1050px) !default; // Change to 9999px for always mobile layout
 $topbar-media-query:                   "only screen and (min-width:"#{$topbar-breakpoint}")" !default;
 
 // Divider Styles
@@ -121,6 +121,7 @@ $topbar-sticky-class:                  ".sticky" !default;
           width: 50%;
           display: block;
           padding: 0 $topbar-height / 3;
+          padding-right: 100px;
         }
       }
     }
