@@ -1,0 +1,45 @@
+@import "../variables";
+@import "../mixins";
+@import "../foundation/variables";
+@import "compass/css3";
+
+.twitterFeed {
+  background: $light;
+  height: 100%;
+  @include flexBox;
+  @include flexJustifyContent(center);
+  @include flexAlignItems(center);
+  ul {
+    margin: 0;
+    padding: 0 40px;
+    li {
+      h3 {
+        font-size: 1.5em;
+        color: $white;
+        margin: 0;
+      }
+      .row {
+        margin-top: 10px;
+        img {
+          width: 48px;
+          height: 48px;
+          margin-right: 15px;
+          @include border-radius(3px);
+        }
+        h3 {
+          color: $darkest;
+          font-size: 1.5em;
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$landscape} {
+  .twitterFeed {
+    ul li h3 {
+      font-size: 1.3em;
+    }
+  }
+}

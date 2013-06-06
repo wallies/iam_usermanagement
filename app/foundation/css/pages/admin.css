@@ -1,0 +1,12 @@
+/* line 2, ../../scss/pages/admin.scss */
+body label {
+  display: inline;
+}
+/* line 5, ../../scss/pages/admin.scss */
+body h3 {
+  padding-bottom: 10px;
+}
+/* line 8, ../../scss/pages/admin.scss */
+body .checkboxColumn {
+  margin-top: 10px;
+}
