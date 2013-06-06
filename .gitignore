@@ -1,4 +1,4 @@
 temp
 dist
-.sass-cache/*
-app/.sass-cache/*
+.sass-cache/
+app/.sass-cache/

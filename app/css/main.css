@@ -58,3 +58,12 @@
 .center {
   text-align: center;
 }
+
+/* line 58, ../scss/main.scss */
+.applications .fc-webicon.facebook.social-size,
+.applications .fc-webicon.twitter.social-size,
+.applications .fc-webicon.youtube.social-size,
+.applications .fc-webicon.googleplus.social-size {
+  height: 35px;
+  width: 35px;
+}
