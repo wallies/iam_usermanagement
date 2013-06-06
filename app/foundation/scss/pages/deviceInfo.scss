@@ -1,0 +1,18 @@
+@import "../variables";
+
+.deviceInfo {
+  padding: 15px;
+  dl {
+    dt, dd {
+      margin-bottom: 5px;
+    }
+    dt{
+      float:left;
+      margin-right: 10px;
+      color: $darkest;
+    }
+    dd {
+      color: $white;
+    }
+  }
+}
