@@ -43,7 +43,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 	        'test/spec/{,*/}*.js'
         ],
-        tasks: ['livereload', 'karma:unit:run']
+        tasks: ['livereload']
       }
     },
     connect: {
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        url: 'http://localhost:<%= connect.options.port %>'
+        url: 'http://localhost:<%= connect.options.port %>/views/'
       }
     },
     clean: {

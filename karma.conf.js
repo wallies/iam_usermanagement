@@ -22,10 +22,10 @@ exclude = [];
 reporters = ['dots'];
 
 // web server port
-port = 8000;
+port = 8080;
 
 // cli runner port
-runnerPort = 9100;
+runnerPort = 9000;
 
 // enable / disable colors in the output (reporters and logs)
 colors = true;
