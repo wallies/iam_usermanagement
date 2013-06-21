@@ -1,4 +1,5 @@
 After cloning the project:
+
 1. Install homebrew - ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 2. Install Redis - brew install redis
 3. Start redis - redis-server
