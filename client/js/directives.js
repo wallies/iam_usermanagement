@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .directive('accessLevel', ['$rootScope', 'Auth', function($rootScope, Auth) {
     return {
         restrict: 'A',
@@ -16,7 +16,7 @@ angular.module('angular-client-side-auth')
     };
 }]);
 
-angular.module('angular-client-side-auth').directive('activeNav', ['$location', function(location) {
+angular.module('user_management').directive('activeNav', ['$location', function(location) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {

@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .controller('AppCtrl',
 ['$rootScope', '$scope', '$location', 'Auth', function($rootScope, $scope, $location, Auth) {
 
@@ -19,7 +19,7 @@ angular.module('angular-client-side-auth')
     };
 }]);
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .controller('LoginCtrl',
 ['$rootScope', '$scope', '$location', '$window', 'Auth', function($rootScope, $scope, $location, $window, Auth) {
 
@@ -43,13 +43,13 @@ angular.module('angular-client-side-auth')
     };
 }]);
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .controller('HomeCtrl',
 ['$rootScope', function($rootScope) {
 
 }]);
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .controller('RegisterCtrl',
 ['$rootScope', '$scope', '$location', 'Auth', function($rootScope, $scope, $location, Auth) {
     $scope.role = routingConfig.userRoles.user;
@@ -70,13 +70,13 @@ angular.module('angular-client-side-auth')
     };
 }]);
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .controller('PrivateCtrl',
 ['$rootScope', function($rootScope) {
 }]);
 
 
-angular.module('angular-client-side-auth')
+angular.module('user_management')
 .controller('AdminCtrl',
 ['$rootScope', '$scope', 'Users', function($rootScope, $scope, Users) {
     $scope.loading = true;
