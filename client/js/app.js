@@ -1,53 +1,106 @@
 'use strict';
 
-angular.module('user_management', ['ngCookies'])
+angular.module('user_management', [
+    'ngCookies'
+    ])
 
     .config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
 
     var access = routingConfig.accessLevels;
 
-    $routeProvider.when('/',
+    $routeProvider
+
+    .when('/',
         {
-            templateUrl:    '/partials/home',
+            templateUrl:    '/partials/account/home.html',
             controller:     'HomeCtrl',
             access:         access.user
-        });
-    $routeProvider.when('/login',
+        })
+    .when('/login',
         {
-            templateUrl:    '/partials/login',
+            templateUrl:    '/partials/login.html',
             controller:     'LoginCtrl',
             access:         access.anon
-        });
-    $routeProvider.when('/register',
+        })
+    .when('/register',
         {
-            templateUrl:    '/partials/register',
+            templateUrl:    '/partials/register.html',
             controller:     'RegisterCtrl',
             access:         access.anon
-        });
-    $routeProvider.when('/auth/twitter',
+        })
+    .when('/auth/twitter',
         {
-            templateUrl:    '/partials/register',
+            templateUrl:    '/partials/register.html',
             controller:     'RegisterCtrl',
             access:         access.anon
-        });
-    $routeProvider.when('/private',
+        })
+    .when('/private',
         {
-            templateUrl:    '/partials/private',
+            templateUrl:    '/partials/account/private.html',
             controller:     'PrivateCtrl',
             access:         access.user
-        });
-    $routeProvider.when('/admin',
+        })
+    .when('/admin',
         {
-            templateUrl:    '/partials/admin',
+            templateUrl:    '/partials/account/admin.html',
             controller:     'AdminCtrl',
             access:         access.admin
-        });
-    $routeProvider.when('/404',
+        })
+    // .when('/account',
+    //     {
+    //         redirectTo : '/account/overview',
+    //         access:         access.user
+    //     })
+    // .when('/account/', 
+    //     {
+    //         redirectTo : '/account/overview',
+    //         access:         access.user
+    //     })
+    // .when('/account/recovery', 
+    //     {
+    //         templateUrl : '/partials/account/recovery.html',
+    //         access:         access.user
+    //     })
+    // .when('/account/email', 
+    //     {
+    //         templateUrl : '/partials/account/email.html',
+    //         access:         access.user
+    //     })
+    // .when('/account/overview', 
+    //     { 
+    //         templateUrl : '/partials/account/overview.html',
+    //         access:         access.user
+    //     })
+    // .when('/account/connected', 
+    //     { 
+    //         templateUrl : '/partials/account/connected.html',
+    //         access:         access.user
+    //     })
+    // .when('/account/password', 
+    //     {
+    //         templateUrl : '/partials/account/password.html',
+    //         access:         access.user
+    //     })
+    // .when('/account/profile', 
+    //     {
+    //         templateUrl : '/partials/account/profile.html',
+    //         access:         access.user
+    //     })
+    // .when('/account/signup', 
+    //     {
+    //         templateUrl : '/partials/account/profile.html',
+    //         access:         access.user
+    //     })
+    
+    // 404
+    .when('/404',
         {
-            templateUrl:    '/partials/404',
+            templateUrl:    '/partials/404.html',
             access:         access.public
-        });
-    $routeProvider.otherwise({redirectTo:'/404'});
+        })
+
+    // Catch all
+    .otherwise({redirectTo:'/404'});
 
     $locationProvider.html5Mode(true);
 

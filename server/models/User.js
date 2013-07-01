@@ -1,14 +1,15 @@
 var User
     , util = require('util')
     , passport = require('passport')
+    , _ =  require('underscore')
     , LocalStrategy = require('passport-local').Strategy
     , TwitterStrategy = require('passport-twitter').Strategy
     , FacebookStrategy = require('passport-facebook').Strategy
     , GoogleStrategy = require('passport-google').Strategy
     , LinkedInStrategy = require('passport-linkedin').Strategy
     , check = require('validator').check
-    , userRoles = require('../../client/js/routingConfig').userRoles
-    , OpenAmStrategy = require('../lib/passport-openam').Strategy;
+    , userRoles = require('../../client/js/routingConfig').userRoles;
+    // , OpenAmStrategy = require('../lib/passport-openam').Strategy;
 
 var users = [
     {
@@ -168,26 +169,26 @@ module.exports = {
     // Strategies in Passport require a `verify` function, which accept
     // credentials (in this case, an accessToken, refreshToken, and Facebook
     // profile), and invoke a callback with a user object.
-    openAMStrategy: function() {
+    // openAMStrategy: function() {
 
-        return new OpenAmStrategy({
-            callbackUrl: "http://localhost:9090/auth/openam/callback",
-            openAmBaseUrl: "http://sso.testserver.com/oneid/"
-        },
+    //     return new OpenAmStrategy({
+    //         callbackUrl: "http://localhost:9090/auth/openam/callback",
+    //         openAmBaseUrl: "http://sso.testserver.com/oneid/"
+    //     },
     
-        function(token, profile, done) {
-            // asynchronous verification, for effect...
-            process.nextTick(function () {
+    //     function(token, profile, done) {
+    //         // asynchronous verification, for effect...
+    //         process.nextTick(function () {
           
-              // To keep the example simple, the user's OpenAm profile is returned to
-              // represent the logged-in user. In a typical application, you would want
-              // to associate the OpenAm account with a user record in your database,
-              // and return that user instead.
-              return done(null, profile.id);
-            });
-        }
-        );
-    },
+    //           // To keep the example simple, the user's OpenAm profile is returned to
+    //           // represent the logged-in user. In a typical application, you would want
+    //           // to associate the OpenAm account with a user record in your database,
+    //           // and return that user instead.
+    //           return done(null, profile.id);
+    //         });
+    //     }
+    //     );
+    // },
 
     serializeUser: function(user, done) {
         done(null, user.id);

@@ -1,8 +1,4 @@
-#################
-## Eclipse
-#################
 
-*.pydevproject
 .project
 .metadata
 bin/
@@ -15,7 +11,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
-.idea/
+.idea/*
 node_modules/
 
 

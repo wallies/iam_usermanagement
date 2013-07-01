@@ -4,6 +4,7 @@
   "dependencies": {
     "express": "*",
     "underscore": "*",
+    "html": "*",
     "jade": "*",
     "passport": "0.1.x",
     "passport-local": "*",

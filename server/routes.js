@@ -124,7 +124,7 @@ var routes = [
                 'username': username,
                 'role': role
             }));
-            res.render('index');
+            res.render('index.html');
         }],
         accessLevel: accessLevels.public
     }

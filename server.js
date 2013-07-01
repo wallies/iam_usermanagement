@@ -7,7 +7,7 @@ var express = require('express')
 var app = express();
 
 app.set('views', __dirname + '/client/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 app.use(express.logger('dev'))
 app.use(express.cookieParser());
 app.use(express.bodyParser());
@@ -19,6 +19,7 @@ app.use(express.cookieSession(
     }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.engine('html', require('ejs').__express);
 
 passport.use(User.localStrategy);
 // passport.use(User.openAMStrategy()); // Comment out this line if you don't want to enable login via Twitter
