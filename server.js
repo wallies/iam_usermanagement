@@ -1,8 +1,20 @@
 var express = require('express')
-    , http = require('http')
+    //, http = require('http')
     , passport = require('passport')
     , path = require('path')
+    , spdy = require('spdy')
+    , fs = require('fs')
     , User = require('./server/models/User.js');
+
+var options = { 
+	plain: true,
+  	ssl: true,
+	key: fs.readFileSync(__dirname + '/keys/twitlog-key.pem'),
+  	cert: fs.readFileSync(__dirname + '/keys/twitlog-cert.pem'),
+  	ca: fs.readFileSync(__dirname + '/keys/twitlog-csr.pem'),
+  // 	ciphers: '!aNULL:!ADH:!eNull:!LOW:!EXP:RC4+RSA:MEDIUM:HIGH',
+ 	// maxStreams: 15
+};
 
 var app = express();
 
@@ -33,7 +45,11 @@ passport.deserializeUser(User.deserializeUser);
 
 require('./server/routes.js')(app);
 
-app.set('port', process.env.PORT || 9090);
-http.createServer(app).listen(app.get('port'), function(){
-    console.log("Server listening on port " + app.get('port'));
-});
+var server = spdy.createServer(options, app);
+server.listen(8443);
+
+console.log("Server listening on port %d", server.address().port);
+
+// http.createServer(app).listen(app.get('port'), function(){
+//     console.log("Server listening on port " + app.get('port'));
+// });

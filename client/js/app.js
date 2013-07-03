@@ -34,10 +34,10 @@ angular.module('user_management', [
             controller:     'RegisterCtrl',
             access:         access.anon
         })
-    .when('/private',
+    .when('/apps',
         {
-            templateUrl:    '/partials/account/private.html',
-            controller:     'PrivateCtrl',
+            templateUrl:    '/partials/account/apps.html',
+            controller:     'AppsCtrl',
             access:         access.user
         })
     .when('/admin',

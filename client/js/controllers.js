@@ -71,7 +71,7 @@ angular.module('user_management')
 }]);
 
 angular.module('user_management')
-.controller('PrivateCtrl',
+.controller('AppsCtrl',
 ['$rootScope', function($rootScope) {
 }]);
 

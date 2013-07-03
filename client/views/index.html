@@ -21,12 +21,12 @@
           <ul class="nav">
             <li data-access-level="{{ accessLevels.anon }}" active-nav><a href="/login">Log in</a></li>
             <li data-access-level="{{ accessLevels.anon }}" active-nav><a href="/register">Register</a></li>
-            <li data-access-level="{{ accessLevels.user }}" active-nav><a href="/">Home</a></li>
-            <li data-access-level="{{ accessLevels.user }}" active-nav><a href="/private">Private</a></li>
+            <li data-access-level="{{ accessLevels.user }}" active-nav><a href="/">Home</a></li>       
+            <li data-access-level="{{ accessLevels.user }}" active-nav><a href="/apps">Applications</a></li>
             <li data-access-level="{{ accessLevels.admin }}" active-nav><a href="/admin">Admin</a></li>
             <li data-access-level="{{ accessLevels.user }}"><a href="" data-ng-click="logout()">Log out</a></li>
           </ul>
-          <div id="userInfo" data-access-level="{{ accessLevels.user }}" class="pull-right">Welcome&nbsp;<strong>{{ user.username }}&nbsp;</strong><span data-ng-class="{&quot;label-info&quot;: user.role == userRoles.user, &quot;label-success&quot;: user.role == userRoles.admin}" class="label">{{ getUserRoleText(user.role) }}</span></div>
+          
         </div>
       </div>
     </div>

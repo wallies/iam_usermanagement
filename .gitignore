@@ -2,6 +2,7 @@
 .project
 .metadata
 bin/
+keys/
 tmp/
 *.tmp
 *.bak
@@ -13,7 +14,7 @@ local.properties
 .loadpath
 .idea/*
 node_modules/
-
+npm-debug.log
 
 # Mac crap
 .DS_Store
