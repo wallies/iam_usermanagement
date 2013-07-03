@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 After cloning the project:
 1. Install homebrew - ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 2. Install Redis - brew install redis
@@ -7,4 +8,11 @@ After cloning the project:
 6. to start the node server - node server.js
 
 Ready to go!
+=======
+User Management Application
+
+Note: Twitter/Facebook/Google auth is enabled by default, but you can easily turn it off by commenting out the <code>passport.use()</code> statements in the server.js file.
+
+
+>>>>>>> f5e026eca35a166590b043ad689488feaf85de66
 

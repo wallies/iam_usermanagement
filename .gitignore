@@ -1,5 +1,32 @@
+<<<<<<< HEAD
 temp
 dist
 .sass-cache/
 app/.sass-cache/
 node_modules/
+=======
+
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.idea/*
+node_modules/
+
+
+# Mac crap
+.DS_Store
+
+###########
+# Misc.
+###########
+*.env
+>>>>>>> f5e026eca35a166590b043ad689488feaf85de66
