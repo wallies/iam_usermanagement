@@ -1,0 +1,29 @@
+{
+  "name": "user_management",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "underscore": "*",
+    "html": "*",
+    "jade": "*",
+    "passport": "0.1.x",
+    "passport-local": "*",
+    "validator": "~1.1.1",
+    "passport-twitter": "~0.1.4",
+    "passport-facebook": "~0.1.5",
+    "passport-google": "~0.3.0",
+    "passport-linkedin": "~0.1.3",
+    "passport-openam": "*"
+  },
+  "devDependencies": {
+    "sinon": "~1.7.2",
+    "chai": "~1.6.1",
+    "mocha": "~1.10.0"
+  },
+  "scripts": {
+    "test": "mocha server/tests --recursive"
+  },
+  "engines": {
+    "node": "0.10.12"
+  }
+}
