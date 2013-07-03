@@ -1,9 +1,0 @@
-{
-  "name": "angular-http-auth",
-  "version": "0.0.0",
-  "commit": "33338422c7a6e71939aa00c40a89aa076f550c66",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/qloo/angular-http-auth.git"
-  }
-}

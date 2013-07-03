@@ -1,4 +1,0 @@
-#/bin/sh
-sudo npm install
-bower install
-sudo gem install compass
