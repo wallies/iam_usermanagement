@@ -40,6 +40,12 @@ angular.module('user_management', [
             controller:     'PrivateCtrl',
             access:         access.user
         })
+    .when('/token',
+        {
+            templateUrl:    '/partials/account/token.html',
+            controller:     'PrivateCtrl',
+            access:         access.user
+        })
     .when('/admin',
         {
             templateUrl:    '/partials/account/admin.html',
