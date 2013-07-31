@@ -4,29 +4,31 @@
     <div class="row">
       <div class="large-8 medium-8 columns">
         <p class="subheader"> You can either register a new user, log in with one of the two predefined users...</p>  
-        <form ng-submit="login()" name="loginForm" class="form-horizontal">
+        <form ng-submit="login()" name="loginForm" class="form-horizontal custom">
         <div class="control-group">
-          <label for="username" class="control-label">Username</label>
           <div class="controls">
             <input type="text" data-ng-model="username" placeholder="Username" name="username" required="required"/>
           </div>
         </div>
         <div class="control-group">
-          <label for="password" class="control-label">Password</label>
           <div class="controls">
             <input type="password" data-ng-model="password" placeholder="Password" name="password" required="required"/>
           </div>
         </div>
         <div class="control-group">
           <div class="controls">
-            <label for="rememberme" class="checkbox">
-              <input type="checkbox" data-ng-model="rememberme" name="rememberme"/>Remember me
+            <label for="rememberme">
+              <input type="checkbox" data-ng-model="rememberme" name="rememberme" id="rememberme" style="display: none;">
+              <span class="custom checkbox"></span>&nbsp;Remember me
             </label>
           </div>
+          <br>
+          <p class="subheader"><a href="#">Forgot password</a></p>
         </div>
         <div class="control-group">
           <div class="controls">
-            <button type="submit" class="btn">Log in</button>
+            <button type="submit" class="button radius right hide-for-small">Log in</button>
+            <button type="submit" class="button radius right expand show-for-small">Log in</button>
           </div>
         </div>
       </form>
@@ -39,6 +41,7 @@
           <li><a href="" data-ng-click="loginOauth('google')" class="button radius secondary large"><i class="icon-google-plus-sign"></i> Google</a></li>
           <li><a href="" data-ng-click="loginOauth('linkedin')" class="button radius secondary large"><i class="icon-linkedin"></i> LinkedIn</a></li>
         </ul>
+        <p class="subheader"><a href="#" data-reveal-id="myModal">Terms of Use &amp; Privacy Policy</a></p>
       </div>
     </div>
   </div>
