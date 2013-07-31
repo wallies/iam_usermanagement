@@ -40,6 +40,12 @@ angular.module('user_management', [
             controller:     'PrivateCtrl',
             access:         access.user
         })
+    .when('/applications',
+        {
+            templateUrl:    '/partials/account/applications.html',
+            controller:     'PrivateCtrl',
+            access:         access.user
+        })
     .when('/token',
         {
             templateUrl:    '/partials/account/token.html',
@@ -144,7 +150,8 @@ angular.module('user_management', [
     }];
 
     $httpProvider.responseInterceptors.push(interceptor);
-
+    var html5Mode = //@@html5Mode;
+    $locationProvider.html5Mode(html5Mode);
 }])
 
     .run(['$rootScope', '$location', 'Auth', function ($rootScope, $location, Auth) {
@@ -158,4 +165,6 @@ angular.module('user_management', [
         });
 
         $rootScope.appInitialized = true;
+
     }]);
+

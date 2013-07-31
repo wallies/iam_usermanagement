@@ -19,6 +19,14 @@
 	</head>
 	<body data-ng-controller="AppCtrl" data-ng-cloak>
 		<div id="cover" data-ng-hide="appInitialized" data-ng-animate="{ hide: 'fade-hide' }"></div>
+
+		<div class="row">
+			<div class="small-16 columns">
+				<div class="small-8 large-3 small-centered columns">
+					<img src="http://www.livingyourfuture.co.uk/images/Logo-Capgemini-2.jpg" alt="" class="cap-logo"/>
+				</div>
+			</div>
+		</div>
 		
 		<nav class="top-bar">
 			<ul class="title-area">
@@ -59,7 +67,7 @@
 				</ul>
 			</section>
 		</nav>
-		<div id="userInfo" data-access-level="{{ accessLevels.user }}" class="pull-right">Welcome&nbsp;<strong>{{ user.username }}&nbsp;</strong>
+		<div id="userInfo" data-access-level="{{ accessLevels.user }}" class="left">Welcome&nbsp;<strong>{{ user.username }}&nbsp;</strong>
 			<span data-ng-class="{&quot;label-info&quot;: user.role == userRoles.user, &quot;label-success&quot;: user.role == userRoles.admin}" class="label">{{ getUserRoleText(user.role) }}</span>
 		</div>
 		<div class="row">

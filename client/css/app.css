@@ -72,3 +72,12 @@ ul.block-grid li {
 .center {
     text-align: center;
 }
+
+.marRight {
+    margin-right: 10px;
+}
+
+.cap-logo {
+    width: 100%;
+    margin-bottom: 20px;
+}
