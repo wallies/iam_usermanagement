@@ -68,3 +68,7 @@ ul.block-grid li {
 .alert-box p {
     margin-bottom: 0;
 }
+
+.center {
+    text-align: center;
+}

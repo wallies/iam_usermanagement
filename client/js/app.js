@@ -46,6 +46,18 @@ angular.module('user_management', [
             controller:     'PrivateCtrl',
             access:         access.user
         })
+    .when('/session',
+        {
+            templateUrl:    '/partials/account/session.html',
+            controller:     'PrivateCtrl',
+            access:         access.user
+        })
+    .when('/changePassword',
+        {
+            templateUrl:    '/partials/account/changePassword.html',
+            controller:     'PrivateCtrl',
+            access:         access.user
+        })
     .when('/admin',
         {
             templateUrl:    '/partials/account/admin.html',
