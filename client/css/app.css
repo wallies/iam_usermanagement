@@ -49,3 +49,7 @@ body {
 .fade-show-setup.fade-show-start {
     opacity:1;
 }
+
+.block-grid .button {
+    width: 100%;
+}
