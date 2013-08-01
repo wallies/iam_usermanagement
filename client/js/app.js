@@ -150,8 +150,7 @@ angular.module('user_management', [
     }];
 
     $httpProvider.responseInterceptors.push(interceptor);
-    var html5Mode = //@@html5Mode;
-    $locationProvider.html5Mode(html5Mode);
+    $locationProvider.html5Mode(true);
 }])
 
     .run(['$rootScope', '$location', 'Auth', function ($rootScope, $location, Auth) {

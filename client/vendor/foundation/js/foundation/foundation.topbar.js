@@ -41,6 +41,7 @@
 
           var breakpoint = $("<div class='top-bar-js-breakpoint'/>").insertAfter(self.settings.$topbar);
           self.settings.breakPoint = breakpoint.width();
+          self.settings.breakPoint = 1024;
           breakpoint.remove();
 
           self.assemble();
@@ -272,12 +273,12 @@
             t_top;
 
           //Whe resize elements of the page on windows resize. Must recalculate distance
-      		$(window).resize(function() {
+          $(window).resize(function() {
             clearTimeout(t_top);
-      			t_top = setTimeout (function() {
-        			distance = $(klass).offset().top;
-      			},105);
-      		});
+            t_top = setTimeout (function() {
+              distance = $(klass).offset().top;
+            },105);
+          });
           $window.scroll(function() {
             if ($window.scrollTop() > (distance)) {
               $(klass).addClass("fixed");
