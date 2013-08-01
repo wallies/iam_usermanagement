@@ -2,8 +2,9 @@
   <div class="large-15 small-15 columns small-centered large-centered">
     <h1 class="subheader">Log in</h1>
     <div class="row">
-      <div class="large-8 medium-8 columns">
-        <p class="subheader"> You can either register a new user, log in with one of the two predefined users...</p>  
+      <div class="large-7 medium-7 columns">
+        <br>
+        <br>
         <form ng-submit="login()" name="loginForm" class="form-horizontal custom">
         <div class="control-group">
           <div class="controls">
@@ -15,31 +16,39 @@
             <input type="password" data-ng-model="password" placeholder="Password" name="password" required="required"/>
           </div>
         </div>
-        <div class="control-group">
-          <div class="controls">
-            <label for="rememberme">
-              <input type="checkbox" data-ng-model="rememberme" name="rememberme" id="rememberme" style="display: none;">
-              <span class="custom checkbox"></span>&nbsp;Remember me
-            </label>
-          </div>
-          <br>
-          <p class="subheader"><a href="#">Forgot password</a></p>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <button type="submit" class="button radius right hide-for-small">Log in</button>
-            <button type="submit" class="button radius right expand show-for-small">Log in</button>
+        <div class="row">
+          <div class="large-16 columns">
+            <div class="large-7 medium-7 columns">
+              <div class="control-group">
+                <div class="controls">
+                  <label for="rememberme">
+                    <input type="checkbox" data-ng-model="rememberme" name="rememberme" id="rememberme" style="display: none;">
+                    <span class="custom checkbox"></span>&nbsp;Remember me
+                  </label>
+                </div>
+                <br>
+                <p class="subheader"><a href="#">Forgot password</a></p>
+              </div>
+            </div>
+            <div class="large-7 medium-7 columns">
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" class="button radius right hide-for-small">Log in</button>
+                  <button type="submit" class="button radius right expand show-for-small">Log in</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </form>
       </div>
-      <div class="large-7 medium-7 columns right">
+      <div class="large-8 medium-8 columns right">
         <p class="subheader">... or use one of them fancy social logins:</p>
         <ul class="large-block-grid-2 small-block-grid-1 block-grid">
-          <li><a href="" data-ng-click="loginOauth('facebook')" class="button radius secondary large"><i class="icon-facebook-sign"></i> Facebook</a></li>
-          <li><a href="" data-ng-click="loginOauth('twitter')" class="button radius secondary large"><i class="icon-twitter"></i> Twitter</a></li>
-          <li><a href="" data-ng-click="loginOauth('google')" class="button radius secondary large"><i class="icon-google-plus-sign"></i> Google</a></li>
-          <li><a href="" data-ng-click="loginOauth('linkedin')" class="button radius secondary large"><i class="icon-linkedin"></i> LinkedIn</a></li>
+          <li><a href="" data-ng-click="loginOauth('facebook')" class="social button radius secondary large"><i class="icon-facebook-sign"></i> <p class="social-name fb">Facebook</p></a></li>
+          <li><a href="" data-ng-click="loginOauth('twitter')" class="social button radius secondary large"><i class="icon-twitter"></i> <p class="social-name tw">Twitter</p></a></li>
+          <li><a href="" data-ng-click="loginOauth('google')" class="social button radius secondary large"><i class="icon-google-plus-sign"></i> <p class="social-name go">Google</p></a></li>
+          <li><a href="" data-ng-click="loginOauth('linkedin')" class="social button radius secondary large"><i class="icon-linkedin"></i> <p class="social-name li">LinkedIn</p></a></li>
         </ul>
         <p class="subheader"><a href="#" data-reveal-id="myModal">Terms of Use &amp; Privacy Policy</a></p>
       </div>

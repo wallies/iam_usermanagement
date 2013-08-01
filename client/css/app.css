@@ -29,12 +29,39 @@ body {
     color: #D74634;
 }
 
-/*.icon-linkedin, 
+.icon-linkedin, 
 .icon-twitter,
 .icon-facebook-sign,
 .icon-google-plus-sign {
-    font-size: 30px;
-}*/
+    font-size: 60px;
+    float: left;
+}
+
+.block-grid li a.social.button {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.social-name {
+    margin-top: 4%;
+    margin-bottom: 0;
+    float: left;
+    margin-left: 10px;
+}
+
+.social-name.fb {
+    color: rgb(54,98,160);
+}
+
+.social-name.tw {
+    color: rgb(0,167,231);
+}
+
+.social-name.go {
+    color: rgb(215,70,52);
+}
 
 .fade-hide-setup, .fade-show-setup {
     -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
@@ -80,4 +107,5 @@ ul.block-grid li {
 .cap-logo {
     width: 100%;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
