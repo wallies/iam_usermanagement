@@ -4,9 +4,9 @@
   "main": "js/angular-authentication.js",
   "dependencies": {
     "hapi": "~1.2.0",
-    "superagent": "~0.14.6",
+    "superagent": "~> 4.0.0",
     "redis": "~0.8.3",
-    "handlebars": "~1.0.11",
+    "handlebars": "~> 4.0.0",
     "grunt-jasmine-node": "~0.1.0",
     "node-cluster": "~0.1.18",
     "async": "~0.2.9"
